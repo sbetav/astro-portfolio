@@ -1,0 +1,56 @@
+---
+import MaxWidthWrapper from "../MaxWidthWrapper.astro";
+---
+
+<section>
+  <MaxWidthWrapper
+    className="relative flex min-h-hero items-center justify-center"
+  >
+    {/* BACKGROUND MESH */}
+    <img
+      src="/hero-figure.png"
+      alt=""
+      width={292}
+      height={481}
+      class="absolute bottom-0 left-0 -z-10 h-[320px] w-[260px] blur-[120px] md:h-[380px] md:w-[280px]"
+    />
+    <img
+      src="/hero-figure2.png"
+      alt=""
+      width={400}
+      height={600}
+      class="absolute right-0 top-0 -z-10 h-[360px] w-[300px] blur-[120px] md:h-[420px] md:w-[380px]"
+    />
+
+    <div
+      class="mb-10 flex w-full flex-col items-end justify-between gap-20 xl:mb-28 xl:flex-row"
+    >
+      <div class="flex w-full flex-col gap-5">
+        <div class="flex items-center gap-4">
+          <div class="h-[3px] w-[40px] bg-black"></div>
+          <span class="sm:text-lg">Hi, I&apos;m Santiago Betancur</span>
+        </div>
+        <h1 class="text-6xl sm:text-8xl font-serif">
+          Frontend
+          <br />
+          Developer
+        </h1>
+      </div>
+      <div class="flex w-full flex-col gap-5">
+        <div class="h-[3px] w-[40px] bg-black"></div>
+        <p class="max-w-lg sm:text-lg">
+          Software engineer student and passionate for creating beautiful and
+          functional web interfaces. Comfortable working with the latest
+          frontend technologies and frameworks like React and Vue.
+        </p>
+      </div>
+    </div>
+    <img
+      src="/quote.png"
+      alt="God is also a designer"
+      width={100}
+      height={100}
+      class="pointer-events-none absolute bottom-12 right-10 size-20 sm:size-[100px] md:bottom-24 md:right-24"
+    />
+  </MaxWidthWrapper>
+</section>

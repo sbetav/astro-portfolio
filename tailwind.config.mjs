@@ -11,6 +11,9 @@ export default {
       colors: {
         "gray-bg": "#111",
       },
+      minHeight: {
+        hero: "calc(100vh - 90px)",
+      },
     },
   },
   plugins: [],
