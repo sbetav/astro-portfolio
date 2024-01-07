@@ -1,0 +1,25 @@
+.container {
+    clip-path: circle(10px at calc(100% - 98px) 44px);
+    transition: clip-path 0.5s ease-in-out;
+  }
+  
+  .open {
+    clip-path: circle(100%) !important;
+  }
+  
+  .arrowAnimation {
+    animation: arrowAnimation 1s infinite;
+  }
+  
+  @keyframes arrowAnimation {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(10px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  

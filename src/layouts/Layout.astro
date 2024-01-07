@@ -1,4 +1,7 @@
 ---
+import Header from "../components/header/Header.astro";
+import "@fontsource-variable/manrope";
+import "@fontsource-variable/vollkorn";
 interface Props {
   title: string;
 }
@@ -17,10 +20,12 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
+    <Header />
     <slot />
   </body>
 </html>
 <style is:global>
-  html {
+  body {
+    font-family: "Manrope Variable", sans-serif;
   }
 </style>
