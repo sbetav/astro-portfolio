@@ -2,6 +2,7 @@ import type { FC } from "preact/compat";
 import { useEffect, useRef, useState } from "preact/hooks";
 import styles from "../../styles/HeaderMenu.module.css";
 import { useWindowSize } from "../../hooks/useWindowSize.ts";
+import { useScrollLock } from "../../hooks/useScrollLock.ts";
 
 interface MenuProps {}
 
@@ -22,6 +23,18 @@ const HeaderMenu: FC<MenuProps> = ({}) => {
       setMenuPosition({ x, y });
     }
   }, [size]);
+
+  // Disable scroll if menu is open
+
+  const { lockScroll, unlockScroll } = useScrollLock();
+
+  useEffect(() => {
+    if (open) {
+      lockScroll();
+    } else {
+      unlockScroll();
+    }
+  }, [open]);
 
   // Links
 

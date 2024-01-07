@@ -1,0 +1,47 @@
+---
+import MaxWidthWrapper from "../MaxWidthWrapper.astro";
+
+const experienceItems: {
+  title: string;
+  date: string;
+  roleTasks: string[];
+}[] = [
+  {
+    title: "Frontend Developer - Blueflowtech",
+    date: "Sep 2023 - Present",
+    roleTasks: [
+      "Utilize React and Vue to create responsive and interactive user interfaces based on provided designs or wireframes.",
+      "Build reusable and efficient components using React or Vue to ensure consistency and scalability across the application.",
+      "Achieve a cohesive design, ensuring responsiveness and accessibility using TailwindCSS.",
+      "Leverage Next.js for server-side rendering, routing, and optimizing web applications for performance and SEO.",
+      "Implement real-time functionality using socket-based solutions like Socket.IO or WebSockets for live updates and communication between the server and clients.",
+      "Work closely with backend developers, UI/UX designers, and other team members to integrate frontend interfaces with backend services and APIs.",
+    ],
+  },
+];
+---
+
+<section class="py-40">
+  <MaxWidthWrapper className="flex flex-col items-center justify-center">
+    <div class="flex max-w-2xl flex-col items-center gap-12">
+      <h2 class="w-full text-center text-5xl sm:text-6xl font-serif">
+        Experience
+      </h2>
+      {
+        experienceItems.map((item, i) => (
+          <article class="flex w-full flex-col gap-2">
+            <h3 class="font-bold">{item.title}</h3>
+            <span class="text-sm font-medium italic text-gray-800">
+              {item.date}
+            </span>
+            <ul class="mt-4 flex list-disc flex-col gap-3">
+              {item.roleTasks.map((task, i) => (
+                <li class="ml-5">{task}</li>
+              ))}
+            </ul>
+          </article>
+        ))
+      }
+    </div>
+  </MaxWidthWrapper>
+</section>

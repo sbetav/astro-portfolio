@@ -1,15 +1,17 @@
 ---
 import Hero from "../components/landing/Hero.astro";
+import Experience from "../components/landing/Experience.astro";
 import HomeLayout from "../layouts/HomeLayout.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Santiago Betancur | Frontend Developer">
-  <main>
-    <HomeLayout>
+  <HomeLayout>
+    <main  class="w-full">
       <Hero />
-    </HomeLayout>
-  </main>
+      <Experience />
+    </main>
+  </HomeLayout>
 </Layout>
 
 <style></style>
