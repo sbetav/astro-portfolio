@@ -1,13 +1,15 @@
 ---
-import Hero from '../components/landing/Hero.astro';
-import Layout from '../layouts/Layout.astro';
+import Hero from "../components/landing/Hero.astro";
+import HomeLayout from "../layouts/HomeLayout.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Santiago Betancur | Frontend Developer">
-	<main>
-		<Hero />
-	</main>
+  <main>
+    <HomeLayout>
+      <Hero />
+    </HomeLayout>
+  </main>
 </Layout>
 
-<style>
-</style>
+<style></style>
