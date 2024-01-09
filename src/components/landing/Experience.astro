@@ -21,27 +21,25 @@ const experienceItems: {
 ];
 ---
 
-<section class="py-40">
-  <MaxWidthWrapper className="flex flex-col items-center justify-center">
-    <div class="flex max-w-2xl flex-col items-center gap-12">
-      <h2 class="w-full text-center text-5xl sm:text-6xl font-serif">
-        Experience
-      </h2>
-      {
-        experienceItems.map((item, i) => (
-          <article class="flex w-full flex-col gap-2">
-            <h3 class="font-bold">{item.title}</h3>
-            <span class="text-sm font-medium italic text-gray-800">
-              {item.date}
-            </span>
-            <ul class="mt-4 flex list-disc flex-col gap-3">
-              {item.roleTasks.map((task, i) => (
-                <li class="ml-5">{task}</li>
-              ))}
-            </ul>
-          </article>
-        ))
-      }
-    </div>
-  </MaxWidthWrapper>
+<section class="py-40 flex flex-col items-center justify-center">
+  <div class="flex max-w-2xl flex-col items-center gap-12">
+    <h2 class="w-full text-center text-5xl sm:text-6xl font-serif">
+      Experience
+    </h2>
+    {
+      experienceItems.map((item, i) => (
+        <article class="flex w-full flex-col gap-2">
+          <h3 class="font-bold">{item.title}</h3>
+          <span class="text-sm font-medium italic text-gray-800">
+            {item.date}
+          </span>
+          <ul class="mt-4 flex list-disc flex-col gap-3">
+            {item.roleTasks.map((task, i) => (
+              <li class="ml-5">{task}</li>
+            ))}
+          </ul>
+        </article>
+      ))
+    }
+  </div>
 </section>

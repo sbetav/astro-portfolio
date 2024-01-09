@@ -39,9 +39,9 @@ const HeaderMenu: FC<MenuProps> = ({}) => {
   // Links
 
   const links: { title: string; href: string }[] = [
-    { title: "About me", href: "/" },
-    { title: "Experience", href: "/#experience" },
-    { title: "Get in touch", href: "/#contact" },
+    { title: "About me", href: "#" },
+    { title: "Experience", href: "#experience" },
+    { title: "Get in touch", href: "#contact" },
   ];
 
   const socialLinks: { title: string; href: string }[] = [
@@ -99,10 +99,10 @@ const HeaderMenu: FC<MenuProps> = ({}) => {
           className="absolute left-0 top-0 h-full w-full object-cover opacity-[0.03]"
           alt="Topographic background"
         />
-        <div className="mx-auto w-full max-w-screen-2xl px-5 md:px-20 relative flex h-full flex-col items-center justify-center gap-20 py-6 lg:flex-row lg:justify-between">
+        <div className="mx-auto w-full max-w-screen-2xl px-8 md:px-20 relative flex h-full flex-col items-center justify-center gap-20 py-6 lg:flex-row lg:justify-between">
           <button
             onClick={() => setOpen(!open)}
-            className="group absolute right-5 top-6 flex items-center gap-3 text-2xl text-white md:right-20"
+            className="group absolute right-8 top-6 flex items-center gap-3 text-2xl text-white md:right-20"
           >
             Close
             <svg
@@ -128,6 +128,7 @@ const HeaderMenu: FC<MenuProps> = ({}) => {
               {links.map(({ title, href }, i) => (
                 <li>
                   <a
+                    onClick={() => setOpen(false)}
                     href={href}
                     className="group flex items-center gap-4 transition hover:!opacity-100 group-hover/links:opacity-30"
                   >
