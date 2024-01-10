@@ -1,0 +1,19 @@
+---
+interface Props {
+  label: string;
+  color?: "green";
+}
+
+// https://tailwindui.com/components/application-ui/elements/badges
+const { label, color } = Astro.props;
+---
+
+<span
+  class:list={[
+    "inline-flex items-center rounded-md px-2 py-1 text-xs font-medium  ring-1 ring-inset ",
+    { "bg-gray-50 text-gray-600  ring-gray-500/10": !color },
+    { "bg-green-50 text-green-700 ring-green-600/20": color === "green" },
+  ]}
+>
+  {label}
+</span>

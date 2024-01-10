@@ -1,6 +1,4 @@
 ---
-import MaxWidthWrapper from "../MaxWidthWrapper.astro";
-
 const experienceItems: {
   title: string;
   date: string;
@@ -21,13 +19,13 @@ const experienceItems: {
 ];
 ---
 
-<section class="py-40 flex flex-col items-center justify-center">
+<section id="experience" class="py-36 flex flex-col items-center justify-center">
   <div class="flex max-w-2xl flex-col items-center gap-12">
     <h2 class="w-full text-center text-5xl sm:text-6xl font-serif">
       Experience
     </h2>
     {
-      experienceItems.map((item, i) => (
+      experienceItems.map((item) => (
         <article class="flex w-full flex-col gap-2">
           <h3 class="font-bold">{item.title}</h3>
           <span class="text-sm font-medium italic text-gray-800">
