@@ -17,9 +17,29 @@ const experienceItems: {
     ],
   },
 ];
+
+const educationItems: {
+  name: string;
+  institution: string;
+  date: string;
+}[] = [
+  {
+    name: "Software Engineering",
+    institution: "Politécnico Grancolombiano",
+    date: "2022 - Present",
+  },
+  {
+    name: "Frontend Development",
+    institution: "Alura Latam",
+    date: "2022 - 2023",
+  },
+];
 ---
 
-<section id="experience" class="py-36 flex flex-col items-center justify-center">
+<section
+  id="experience"
+  class="py-36 flex flex-col items-center justify-center"
+>
   <div class="flex max-w-2xl flex-col items-center gap-12">
     <h2 class="w-full text-center text-5xl sm:text-6xl font-serif">
       Experience
@@ -39,5 +59,23 @@ const experienceItems: {
         </article>
       ))
     }
+
+    <div class="w-full flex flex-col gap-4">
+      <h3 class="text-3xl font-serif">Education</h3>
+      <ul class="flex flex-wrap gap-6 sm:gap-14">
+        {
+          educationItems.map((item) => (
+            <li class="flex gap-1">
+              <span class="text-xl -mt-[2px]">&bull;</span>
+              <div class="flex flex-col ">
+                <h4 class="font-bold">{item.name}</h4>
+                <span class="text-sm font-medium mt-1">{item.institution}</span>
+                <span class="text-sm italic text-gray-500">{item.date}</span>
+              </div>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
   </div>
 </section>
