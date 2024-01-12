@@ -1,5 +1,5 @@
 ---
-import Badge from "../Badge.astro";
+import Badge, { type BadgeColors } from "../Badge.astro";
 
 const projects: {
   title: string;
@@ -8,42 +8,60 @@ const projects: {
   github: string;
   demo: string;
   technologies: string[];
-  badgeColor?: 'green';
+  badgeColor?: BadgeColors;
 }[] = [
   {
     title: "My Links",
     description:
-      "All your socials in the same place, app that allows you to create a customizable page that houses any important links you want to share.",
+      "Web app that allows you to create custom and minimal landing pages, house any link and social media you would like to share.",
     image: "/my-links.webp",
     demo: "https://vue-my-links.vercel.app/",
     github: "https://github.com/sbetav/vue-my-links",
     technologies: ["Vue", "Tailwind", "Firebase"],
-    badgeColor: 'green',
+    badgeColor: "green",
+  },
+  {
+    title: "Reading List",
+    description:
+      "Thecnical test by midudev, built-in features like global state management, filtering, local storage, window persistence, and testing.",
+    image: "/reading-list.webp",
+    demo: "https://reading-list-ten.vercel.app/",
+    github:
+      "https://github.com/sbetav/pruebas-tecnicas/tree/main/pruebas/01-reading-list/sbetav",
+    technologies: ["Vue", "Tailwind", "Pinia", "Vitest"],
+    badgeColor: "yellow",
+  },
+  {
+    title: "Astro Bytes",
+    description:
+      "Astronomy blog created using the MERN stack, where you can read and post about the latest news in the world of astronomy.",
+    image: "/astro-bytes.webp",
+    demo: "https://mern-astro-bytes.vercel.app/",
+    github: "https://github.com/sbetav/mern-astro-bytes",
+    technologies: ["React", "Node", "Express", "MongoDB", "Tailwind"],
+    badgeColor: "blue",
   },
 ];
 ---
 
 <section class="py-36 flex flex-col items-center justify-center">
-  <div class="flex max-w-2xl flex-col items-center gap-20 w-full">
+  <div class="flex max-w-2xl flex-col items-center gap-16 w-full">
     <h2 class="w-full text-center text-5xl sm:text-6xl font-serif">Projects</h2>
-    <div class="flex flex-col gap-8 w-full">
+    <div class="flex flex-col gap-20 w-full">
       {
         projects.map((project) => (
           <article class="flex flex-col w-full gap-3 overflow-visible">
-            <h3 class="text-3xl font-extrabold">{project.title}</h3>
+            <h3 class="text-3xl font-extrabold tracking-tight">
+              {project.title}
+            </h3>
             <p>{project.description}</p>
-            <div class="relative mt-2">
-              <img
-                src={project.image}
-                alt={project.title}
-                class="absolute top-0 left-0 blur-lg -z-10"
-              />
-              <img
-                src={project.image}
-                alt={project.title}
-                class="z-10 rounded-lg drop-shadow"
-              />
-            </div>
+
+            <img
+              src={project.image}
+              alt={project.title}
+              class="z-10 rounded-lg drop-shadow"
+            />
+
             <div class="flex justify-between items-start mt-3 flex-col-reverse sm:flex-row gap-4">
               <div class="flex items-center gap-3">
                 <a
@@ -83,7 +101,7 @@ const projects: {
               </div>
               <div class="flex gap-1 flex-wrap  justify-end">
                 {project.technologies.map((t) => (
-                  <Badge label={t} color={project.badgeColor}/>
+                  <Badge label={t} color={project.badgeColor} />
                 ))}
               </div>
             </div>
