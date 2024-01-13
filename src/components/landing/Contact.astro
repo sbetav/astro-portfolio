@@ -3,22 +3,32 @@ import ContactForm from "./ContactForm";
 ---
 
 <section
+  class="relative flex min-h-[75vh] items-center justify-center pb-10"
   id="contact"
-  class="py-36 flex justify-between flex-col md:flex-row gap-10 lg:gap-24 max-w-4xl mx-auto"
 >
-  <div class="flex flex-col gap-2 w-full">
-    <div class="flex items-center gap-4">
-      <div class="h-[3px] w-[40px] bg-black"></div>
-      <span class="sm:text-lg">Don&apos;t be shy!</span>
-    </div>
-    <h2 class="text-5xl sm:text-6xl font-serif whitespace-nowrap">
-      Get in touch
-    </h2>
-    <p>
-      Fill out the form and I&apos;ll get back to you as soon as possible. ✌️<br
-      />
-    </p>
-  </div>
+  {/* BACKGROUND MESH */}
+  <img
+    src="/hero-figure.png"
+    alt=""
+    class="absolute bottom-16 left-10 -z-10 h-[260px] w-[200px] blur-[120px] md:bottom-32 md:left-20 md:h-[320px] md:w-[260px] md:blur-[150px]"
+  />
 
-  <ContactForm client:load />
+  <div
+    class="mx-auto flex w-full max-w-4xl flex-col justify-between gap-10 py-36 md:flex-row lg:gap-24"
+  >
+    <div class="flex w-full flex-col gap-2">
+      <div class="flex items-center gap-4">
+        <div class="h-[3px] w-[40px] bg-black"></div>
+        <span class="sm:text-lg">Don&apos;t be shy!</span>
+      </div>
+      <h2 class="whitespace-nowrap font-serif text-5xl sm:text-6xl">
+        Get in touch
+      </h2>
+      <p>
+        Fill out the form and I&apos;ll get back to you as soon as possible. ✌️
+      </p>
+    </div>
+
+    <ContactForm client:load />
+  </div>
 </section>
