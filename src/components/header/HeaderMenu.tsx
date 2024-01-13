@@ -1,5 +1,5 @@
-import type { FC } from "preact/compat";
-import { useEffect, useRef, useState } from "preact/hooks";
+import type { FC } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "../../styles/HeaderMenu.module.css";
 import { useWindowSize } from "../../hooks/useWindowSize.ts";
 import { useScrollLock } from "../../hooks/useScrollLock.ts";
@@ -56,13 +56,13 @@ const HeaderMenu: FC<MenuProps> = ({}) => {
   return (
     <>
       <button
-        class="group flex items-center gap-3 text-2xl"
+        className="group flex items-center gap-3 text-2xl"
         onClick={() => setOpen(!open)}
       >
         Menu
         <div ref={MenuIconRef}>
           <svg
-            class="mt-[2px] rounded-full p-[6px] transition group-hover:bg-gray-bg group-hover:text-white"
+            className="mt-[2px] rounded-full p-[6px] transition group-hover:bg-gray-bg group-hover:text-white"
             width="38"
             height="38"
             viewBox="0 0 26 26"
@@ -72,9 +72,9 @@ const HeaderMenu: FC<MenuProps> = ({}) => {
             <path
               d="M4.83398 6.66699H21.7229M4.83398 13.0003H13.2784M4.83398 19.3337H21.7229"
               stroke="currentColor"
-              stroke-width="2.11111"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2.11111"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             ></path>
           </svg>
         </div>
@@ -106,7 +106,7 @@ const HeaderMenu: FC<MenuProps> = ({}) => {
           >
             Close
             <svg
-              class="mt-[2px] rounded-full p-[6px] transition group-hover:bg-white group-hover:text-black"
+              className="mt-[2px] rounded-full p-[6px] transition group-hover:bg-white group-hover:text-black"
               width={36}
               height={36}
               viewBox="0 0 32 32"
@@ -116,9 +116,9 @@ const HeaderMenu: FC<MenuProps> = ({}) => {
               <path
                 d="M3 29L29 3M3 3L29 29"
                 stroke="currentColor"
-                stroke-width="2.67"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2.67"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
           </button>
@@ -126,7 +126,7 @@ const HeaderMenu: FC<MenuProps> = ({}) => {
           <nav className="flex flex-col gap-14">
             <ul className="group/links flex flex-col gap-6 text-3xl sm:gap-8 sm:text-5xl lg:gap-10 lg:pl-20 lg:text-7xl">
               {links.map(({ title, href }, i) => (
-                <li>
+                <li key={i}>
                   <a
                     onClick={() => setOpen(false)}
                     href={href}
@@ -191,7 +191,7 @@ const HeaderMenu: FC<MenuProps> = ({}) => {
 
             <ul className="font group/social flex flex-col gap-4">
               {socialLinks.map(({ title, href }, i) => (
-                <li>
+                <li key={i}>
                   <a
                     href={href}
                     className="group flex items-end gap-2 transition hover:!opacity-100 group-hover/social:opacity-30"

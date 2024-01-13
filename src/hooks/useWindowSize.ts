@@ -1,4 +1,4 @@
-import { useEffect, useState } from "preact/hooks";
+import { useEffect, useState } from "react";
 
 export function useWindowSize() {
   // Initialize state with undefined width/height so server and client renders match
