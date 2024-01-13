@@ -26,10 +26,31 @@ const ContactForm: FC<ContactFormProps> = ({}) => {
   });
 
   return (
-    <form onSubmit={handleSend} className="flex flex-col gap-5 w-full">
-      <Input placeholder="Your name" {...register("name")} />
-      <Input placeholder="Your email" {...register("email")} />
-      <TextArea placeholder="Leave a message" {...register("message")} />
+    <form onSubmit={handleSend} className="flex flex-col gap-4 w-full">
+      <div>
+        <Input placeholder="Your name" {...register("name")} />
+        {errors.name && (
+          <p className="text-red-400 text-xs mt-2">
+            {errors.name.message as string}
+          </p>
+        )}
+      </div>
+      <div>
+        <Input placeholder="Your email" {...register("email")} />
+        {errors.email && (
+          <p className="text-red-400 text-xs mt-2">
+            {errors.email.message as string}
+          </p>
+        )}
+      </div>
+      <div>
+        <TextArea placeholder="Leave a message" {...register("message")} />
+        {errors.message && (
+          <p className="text-red-400 text-xs mt-2">
+            {errors.message.message as string}
+          </p>
+        )}
+      </div>
 
       <button
         type="submit"
