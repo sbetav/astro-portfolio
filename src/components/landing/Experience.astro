@@ -38,10 +38,15 @@ const educationItems: {
 
 <section
   id="experience"
-  class="py-36 flex flex-col items-center justify-center"
+  class="relative flex flex-col items-center justify-center py-36"
 >
+  <img
+    src="/figure-2.svg"
+    alt="figure"
+    class="absolute bottom-80 left-0 right-0 -z-10 h-[440px] w-[360px] blur-[180px] md:bottom-40 md:left-auto md:right-20 md:blur-[200px]"
+  />
   <div class="flex max-w-2xl flex-col items-center gap-12">
-    <h2 class="w-full text-center text-5xl sm:text-6xl font-serif">
+    <h2 class="w-full text-center font-serif text-5xl sm:text-6xl">
       Experience
     </h2>
     {
@@ -60,16 +65,16 @@ const educationItems: {
       ))
     }
 
-    <div class="w-full flex flex-col gap-4">
-      <h3 class="text-3xl font-serif">Education</h3>
+    <div class="flex w-full flex-col gap-4">
+      <h3 class="font-serif text-3xl">Education</h3>
       <ul class="flex flex-wrap gap-6 sm:gap-14">
         {
           educationItems.map((item) => (
             <li class="flex gap-1">
-              <span class="text-xl -mt-[2px]">&bull;</span>
+              <span class="-mt-[2px] text-xl">&bull;</span>
               <div class="flex flex-col ">
                 <h4 class="font-bold">{item.name}</h4>
-                <span class="text-sm font-medium mt-1">{item.institution}</span>
+                <span class="mt-1 text-sm font-medium">{item.institution}</span>
                 <span class="text-sm italic text-gray-500">{item.date}</span>
               </div>
             </li>
