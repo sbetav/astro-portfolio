@@ -14,11 +14,48 @@ const { title } = Astro.props;
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.webp" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <meta
+      name="description"
+      content="Software engineer student and passionate for creating beautiful and
+    functional web interfaces. Comfortable working with the latest frontend
+    technologies and frameworks like React and Vue."
+    />
+    <!-- Facebook Meta Tags -->
+    <meta
+      property="og:url"
+      content="https://astro-portfolio-inky.vercel.app/"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Santiago Betancur | Frontend Developer"
+    />
+    <meta
+      property="og:description"
+      content="Software engineer, passionate for creating beautiful and functional web interfaces. Comfortable working with the latest frontend technologies."
+    />
+    <meta property="og:image" content="/website-screenshot.webp" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="astro-portfolio-inky.vercel.app" />
+    <meta
+      property="twitter:url"
+      content="https://astro-portfolio-inky.vercel.app/"
+    />
+    <meta
+      name="twitter:title"
+      content="Santiago Betancur | Frontend Developer"
+    />
+    <meta
+      name="twitter:description"
+      content="Software engineer, passionate for creating beautiful and functional web interfaces. Comfortable working with the latest frontend technologies."
+    />
+    <meta name="twitter:image" content="/website-screenshot.webp" />
   </head>
   <body>
     <Header />
