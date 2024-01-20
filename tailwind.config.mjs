@@ -13,6 +13,7 @@ export default {
       },
       minHeight: {
         hero: "calc(100vh - 90px)",
+        'custom-screen': 'calc(100vh - 141px)'
       },
     },
   },

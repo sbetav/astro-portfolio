@@ -1,0 +1,24 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="404 | Not found">
+  <section
+    class="min-h-custom-screen relative flex flex-col items-center justify-center"
+  >
+    <h2 class="text-8xl font-semibold">404</h2>
+    <p class="mt-2">Page not found.</p>
+    <a
+      href="/node_modules"
+      class="mt-8 flex w-[200px] items-center justify-center gap-2 rounded border-[1.5px] border-black bg-black px-4 py-2 text-center font-semibold text-white transition-all hover:bg-white hover:text-black disabled:pointer-events-none disabled:bg-white disabled:text-black"
+    >
+      Go back
+    </a>
+
+    <img
+      src="/figure-1.svg"
+      alt="figure"
+      class="sm::h-[340px] absolute -z-10 h-[320px] w-[740px] blur-[150px]"
+    />
+  </section>
+</Layout>
