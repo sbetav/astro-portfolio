@@ -10,11 +10,11 @@ const { label, color } = Astro.props;
 
 <span
   class:list={[
-    "inline-flex items-center rounded-md px-2 py-1 text-xs font-medium  ring-1 ring-inset ",
-    { "bg-gray-50 text-gray-600  ring-gray-500/10": !color },
-    { "bg-green-50 text-green-600 ring-green-500/20": color === "green" },
-    { "bg-sky-50 text-sky-600  ring-sky-500/20": color === "blue" },
-    { "bg-yellow-50 text-yellow-600  ring-yellow-500/20": color === "yellow" },
+    "inline-flex items-center rounded-md px-2 py-1 text-xs font-medium ring-1 ring-inset ",
+    { "bg-gray-50 text-gray-700  ring-gray-500/10": !color },
+    { "bg-green-50 text-green-700 ring-green-500/20": color === "green" },
+    { "bg-sky-50 text-sky-700  ring-sky-500/20": color === "blue" },
+    { "bg-yellow-50 text-yellow-700  ring-yellow-500/20": color === "yellow" },
   ]}
 >
   {label}
