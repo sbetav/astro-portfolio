@@ -39,7 +39,7 @@ Project Link: [https://github.com/sbetav/astro-portfolio](https://github.com/sbe
 - [Zod](https://zod.dev/) - Used to create form schemas
 - [React Hook Form](https://react-hook-form.com/) - Used for form validations
 
-[product-screenshot]: /website-screenshot.webp
+[product-screenshot]: public/website-screenshot.webp
 [astro]: https://img.shields.io/badge/Astro-0C1222?style=for-the-badge&logo=astro&logoColor=FDFDFE
 [astro-url]: https://astro.build/
 [tailwindcss]: https://img.shields.io/static/v1?style=for-the-badge&message=Tailwind+CSS&color=222222&logo=Tailwind+CSS&logoColor=06B6D4&label=
