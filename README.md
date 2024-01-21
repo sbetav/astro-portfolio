@@ -30,11 +30,11 @@ pnpm build
 ### Contact
 
 Santiago Betancur - santibeta82@gmail.com
-
 Project Link: [https://github.com/sbetav/astro-portfolio](https://github.com/sbetav/astro-portfolio)
 
 ### Acknowledgments
 
+- [React](https://react.dev/) - Used for interactive components
 - [Resend](https://resend.com/) - Used for sending emails
 - [Zod](https://zod.dev/) - Used to create form schemas
 - [React Hook Form](https://react-hook-form.com/) - Used for form validations
