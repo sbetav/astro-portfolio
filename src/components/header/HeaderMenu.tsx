@@ -82,8 +82,8 @@ const HeaderMenu: FC<MenuProps> = ({}) => {
       {/* FULL SCREEN MENU */}
       <div
         style={{
-          clipPath: `circle(0px at ${menuPosition.x + 25}px ${
-            menuPosition.y + 15
+          clipPath: `circle(0px at ${menuPosition.x + 22}px ${
+            menuPosition.y + 12
           }px)`,
           transition: "clip-path 0.5s ease-out",
         }}
